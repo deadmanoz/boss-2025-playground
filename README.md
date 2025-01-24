@@ -7,3 +7,7 @@ I'll be writing notes in the `notes` section and will add random off-piste code 
 ## Contents
 - [Intro](notes/0-intro.md)
 - [RPC Scavenger Hunt](notes/1-rpc-scavenger-hunt.md)
+
+
+## External links
+- [Participant content](participant-content.md)
