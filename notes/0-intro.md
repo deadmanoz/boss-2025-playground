@@ -14,4 +14,4 @@ Anyway, I heard about BOSS and thought that it would be a great way to get my mo
 
 ## Why I'm writing side note
 
-Although it is true that we have been encouraged to "create a record" during the process to for a variety of reasons, truth is I have wanted an excuse to start writing more regularly and more publicly. During my education, I transitioned from almost non-writer to actually enjoying the writing process and appreciating the "writing is thinking" philosophy. But then out in the working world, I gradually wrote less and less, until I was no longer writing at all. And then years passed.. but here we are, writing again.
+Although it is true that we have been encouraged to "create a record" during the process for a variety of reasons, truth is I have wanted an excuse to start writing more regularly and more publicly. During my education, I transitioned from almost non-writer to actually enjoying the writing process and appreciating the "writing is thinking" philosophy. But then out in the working world, I gradually wrote less and less, until I was no longer writing at all. And then years passed.. but here we are, writing again.
