@@ -2,7 +2,7 @@
 
 There were 2 parts to this work, (1) was focused on "recovering" a wallet from a provided private key and (2) was about creating spends from the wallet using different transaction types. I didn't set out to write so much, but there was a lot of ground to cover and learning to be done.
 
-We were required to work against a signet Bitcoin network that had been setup specifically for the BOSS 2025 program. To lock in a known state for evaluation purposes, a certain block was invalidated with `invalidateblock`, rendering all following blocks to also be invalid. Why do I mention this? I found the use of it in one of the setup scripts, ran the script locally and subsequently forgot about it. Sometime later, when I was working on the second part of the challange, I encountered invalid TXIDs that I knew to be valid.. took me a while to realise it why!
+We were required to work against a signet Bitcoin network that had been setup specifically for the BOSS 2025 program. To lock in a known state for evaluation purposes, a certain block was invalidated with `invalidateblock`, rendering all following blocks to also be invalid. Why do I mention this? I found the use of it in one of the setup scripts, ran the script locally and subsequently forgot about it. Sometime later, when I was working on the second part of the challenge, I encountered invalid TXIDs that I knew to be valid.. took me a while to realise it why!
 
 ## Wallet recovery
 This was the easier of the two parts. I was both anxious to get stuck in and also not confident in my fledgling Rust skillz so I did the initial implementation in Python. Once I had a working implementation, I re-implemented in Rust as I had a template I understood to work from.
@@ -30,7 +30,7 @@ And of course the relevant BIPs:
 > TIP: check the endianness of TXIDs you're working with, what is returned by `bitcoin-cli` may need to be modified. I noticed that lots of people got stuck on this.
 
 ## Proof-of-solution
-![My TX](./imgs/2-p2wsh-spend.png)
+![My TX](./images/2-p2wsh-spend.png)
 
 # Learnings
 Lots of learnings from doing this challenge...
@@ -55,9 +55,9 @@ There's also a few other terms you'll come across:
 - Script witness
 - Script code
 
-`scriptSig` and `scriptPubKey` are fields you'll come across in data returned by `bitcoin-cli` when quering block and transaction data. I don't think there is much ambiguity in the terminology of these; `scriptPubKey` is the "locking" script you'll find on transaction outputs, `scriptSig` is the "unlocking" script you'll find on transaction inputs. More specifically, the `scriptSig` is used to satisfy the conditions set by the `scriptPubKey` for legacy transactions.
+`scriptSig` and `scriptPubKey` are fields you'll come across in data returned by `bitcoin-cli` when querying block and transaction data. I don't think there is much ambiguity in the terminology of these; `scriptPubKey` is the "locking" script you'll find on transaction outputs, `scriptSig` is the "unlocking" script you'll find on transaction inputs. More specifically, the `scriptSig` is used to satisfy the conditions set by the `scriptPubKey` for legacy transactions.
 
-Although these fields are always present, the `scriptSig` field is no longer used when satisying the conditions set by the `scriptPubKey` field for Segwit transactions. Data in the `witness` is used for this purpose.
+Although these fields are always present, the `scriptSig` field is no longer used when satisfying the conditions set by the `scriptPubKey` field for Segwit transactions. Data in the `witness` is used for this purpose.
 
 `witness` is also fairly unambiguous, it's the region in a Segwit transaction that contains the data required to unlock Segwit inputs. As an example, a spend of a *single* P2WPKH output in a Segwit transaction would have a `witness` that contains a single `witness field`/`script witness` (for the single transaction input) with:
 1) Number of items in the witness (always 2 for this single input P2WPKH scenario)
@@ -70,7 +70,7 @@ A `witness script` then is the actual script that defines the spending condition
 
 The `script code` is essentially the same as the `witness script` in terms of information, at least for P2WSH, where the `witness script` becomes the `script code` during signature verification.
 
-However, as noted above, there's actually no `witness script` for P2WPKH as it's reconstructed during verification when the P2WPKH transaction type is detected. For P2WPKH the `script code` is `76a914{20-byte-pubkey-hash}88ac`/`OP_DUP OP_HASH160 OP_PUSHDATA_20 <20-byte-pubkey-hash> OP_EQUALVERIFY OP_CHECKSIG`.
+However, as noted above, there's actually no `witness script` for P2WPKH as it's reconstructed during verification when the P2WPKH transaction type is detected. For P2WPKH the `script code` is `76a914{20-byte-pubkey-hash}88ac`/`OP_DUP OP_HASH160 OP_PUSHBYTES_20 <20-byte-pubkey-hash> OP_EQUALVERIFY OP_CHECKSIG`.
 
 Got all that? Phew. Maybe one day I'll touch upon the overloaded term that redeem script also appears to be!!
 

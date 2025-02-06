@@ -5,7 +5,7 @@ I noticed that some participants proceeded to rapidly complete the challenge aft
 
 ## Random notes about Lightning
 ### Differences to Bitcoin L1 in fee structure
-In Bitcoin, putting transaction confirmation timeliness aside, you pay according to the size of the transaction. Larger transactions such as those with more inputs, outputs, or more complex encumberances to be satisfied, cost more. The value of the transaction is not a factor in the cost.
+In Bitcoin, putting transaction confirmation timeliness aside, you pay according to the size of the transaction. Larger transactions such as those with more inputs, outputs, or more complex encumbrances to be satisfied, cost more. The value of the transaction is not a factor in the cost.
 
 In Lightning, the value of a payment *IS* a factor in the cost `Chapter 3: How the Lightning Network Works - Mining Fees Versus Routing Fee`: 
 > Typically, the routing user will charge the sender based on the *value* of the payment, having established a minimum *base fee* (a flat fee for each payment) and a *fee rate* (a prorated fee proportional to the value of the payment).
@@ -13,7 +13,7 @@ In Lightning, the value of a payment *IS* a factor in the cost `Chapter 3: How t
 Said another way `Chapter 3: How the Lightning Network Works - Incentives for Large Value Payment Versus Small Value Payment`:
 > The fee structure in Bitcoin is independent of the transaction value. A $1 million transaction has the same fee as a $1 transaction on Bitcoin, assuming a similar transaction size, in bytes. (..) In Lightning the fee is a fixed-base fee plus a percentage of the transaction value.
 
-### Differences to Bitcoin L1 in interativity
+### Differences to Bitcoin L1 in interactivity
 Receiving bitcoin on Bitcoin is a passive and asynchronous activity. You, or software acting on your behalf, doesn't need to be online to receive bitcoin. This is not the case in Lightning, where you (a Lightning node you run) or software acting on your behalf (a Lightning node operated by a third party) needs to be online to receive bitcoin on Lightning.
 
 `Chapter 3: How the Lightning Network Works - Offline Versus Online, Asynchronous Versus Synchronous`:

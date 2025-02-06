@@ -14,7 +14,11 @@ https://bitcoindevs.xyz/decoding
 
 https://github.com/bitcoin-dev-project/decoding-bitcoin
 
-## Assorted random links
+## Elle Mouton's blog
+Some great information and illustrations on the Lightning Network and the mechanics of channels and HTLCs. In particular the 5 post series on "LN Things" is great - [part 1 is here](https://ellemouton.com/posts/creating-a-channel/).
+
+https://ellemouton.com
+
 
 ## ₿OSS/Chaincode program content
 - Adam Jonas blog - https://adamjonas.com/
@@ -23,6 +27,6 @@ https://github.com/bitcoin-dev-project/decoding-bitcoin
 ## Bitcoin Core
 - Debugging Bitcoin Core: https://github.com/fjahr/debugging_bitcoin
 
-### Rust
+## Rust
 - Rust by example: https://doc.rust-lang.org/rust-by-example/index.html
 - Collections: https://doc.rust-lang.org/std/collections/index.html

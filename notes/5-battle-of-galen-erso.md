@@ -5,7 +5,7 @@ The following is my take on the challenge, with some notes on the warnet and Kub
 - [jgmontoya's post about exploiting the CAddrMan vulnerability ](https://blog.jgmontoya.com/2025/02/04/CAddrMan-Vulnerability.html)
 - [Bronson's post about how he took down other teams nodes before his own teams 😁](https://blog.bakungabronson.com/the-battle-of-galen-erso-recap)
 
-![Team Emerald](./imgs/team-emerald.png)
+![Team Emerald](./images/team-emerald.png)
 
 ## About the challenge
 Details of the challenge are openly available on the [Warnet: The Battle of Galen Erso](https://github.com/bitcoin-dev-project/battle-of-galen-erso) GitHub repo. In brief:
@@ -14,6 +14,6 @@ Details of the challenge are openly available on the [Warnet: The Battle of Gale
 
 ## Interacting with Kubernetes pods
 
-Despite lots of experience with Docker - in my previous life we used Docker/Docker Compose to deploy the dozen or so services that made up our product onto fixed (non-scalable) on-premise hardware - I have never had any reason to use Kubernetes before (despite engineers often pushing to make the switch for often arbitary reasons).
+Despite lots of experience with Docker - in my previous life we used Docker/Docker Compose to deploy the dozen or so services that made up our product onto fixed (non-scalable) on-premise hardware - I have never had any reason to use Kubernetes before (despite engineers often pushing to make the switch for often arbitrary reasons).
 
-So for my own benefit, and maybe those that follow, here's some of the basics of using Kubernetes with warnet and the BOSS 2025 cluster.
+So for my own benefit, and maybe those that follow, here's some of the basics of using Kubernetes with Warnet and the BOSS 2025 cluster.

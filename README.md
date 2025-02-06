@@ -11,7 +11,10 @@ I'll be writing notes in the `notes` section and will add random code snippets i
 - [Block builder](notes/3-block-builder.md)
 - [Lightning RPC Scavenger Hunt](notes/4-lightning-rpc-scavenger-hunt.md)
 - [Battle of Galen Erso](notes/5-battle-of-galen-erso.md)
-
+- [Lightning Route Builder](notes/6-lightning-route-builder.md)
 ## External links
 - [Participant content](participant-content.md)
 - [Useful resources](useful-resources.md)
+
+## Other stuff
+- [TODO](TODO.md)
