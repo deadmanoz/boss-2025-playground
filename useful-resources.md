@@ -15,14 +15,20 @@ https://bitcoindevs.xyz/decoding
 https://github.com/bitcoin-dev-project/decoding-bitcoin
 
 ## Elle Mouton's blog
-Some great information and illustrations on the Lightning Network and the mechanics of channels and HTLCs. In particular the 5 post series on "LN Things" is great - [part 1 is here](https://ellemouton.com/posts/creating-a-channel/).
+Some great information and illustrations on the Lightning Network and the mechanics of channels and HTLCs. In particular:
+- The 5 post series on "LN Things" is a good starting point - [LN Things Part 1: Creating a channel](https://ellemouton.com/posts/creating-a-channel/).
+- The 2 posts on Lightning Network Onion Routing are excellent - [Lightning Network Onion Routing: Preliminaries](https://ellemouton.com/posts/onion-routing-prelims/).
 
 https://ellemouton.com
 
 
 ## ₿OSS/Chaincode program content
-- Adam Jonas blog - https://adamjonas.com/
+- A. Jonas - https://adamjonas.com/
+- John Newbery - https://johnnewbery.com/
 - Yonson (2024) - https://blog.yonson.dev/manual/bitcoin/
+
+## Developer blogs
+- OxB10C - https://b10c.me
 
 ## Bitcoin Core
 - Debugging Bitcoin Core: https://github.com/fjahr/debugging_bitcoin
