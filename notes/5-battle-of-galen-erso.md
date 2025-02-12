@@ -16,4 +16,4 @@ Details of the challenge are openly available on the [Warnet: The Battle of Gale
 
 Despite lots of experience with Docker - in my previous life we used Docker/Docker Compose to deploy the dozen or so services that made up our product onto fixed (non-scalable) on-premise hardware - I have never had any reason to use Kubernetes before (despite engineers often pushing to make the switch for often arbitrary reasons).
 
-So for my own benefit, and maybe those that follow, here's some of the basics of using Kubernetes with Warnet and the BOSS 2025 cluster.
+So for my own benefit, and maybe those that follow, here's some of the basics of using Kubernetes with Warnet and the ₿OSS 2025 cluster.

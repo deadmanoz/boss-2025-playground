@@ -1,6 +1,6 @@
 # Lightning Route Builder
 
-This challenge was all about understanding HTLCs, fees and expiries, routing (simple and MPP) and TLVs. Not going to lie, conceptually this was maybe most difficult of the challenges so far, probably because I only had a surface-level understanding of Lightning. Once I grokked the contents, the implementation was relatively straightforward. 
+This challenge was all about understanding HTLCs, fees and expiries, routing (simple and MPP) and TLVs. Not going to lie, conceptually this was maybe most difficult of the challenges to this point, probably because I only had a surface-level understanding of Lightning. Once I grokked the contents, the implementation was relatively straightforward.
 
 One aspect that tripped me up was the relationship between channels, nodes and hops and which values of `cltv_delta` and the fees (`base_fee_msat`, `proportional_fee_ppm`) applied where. So here's a visual representation based on the example data (changed slightly so as to not give away the solution).
 

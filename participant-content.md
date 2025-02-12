@@ -1,5 +1,5 @@
 # Participant content
-Here's a brief and curated (and thus also incomplete) list of content that has been produced by BOSS 2025 program participants. Note that some material may be program content adjacent.
+Here's a brief and curated (and thus also incomplete) list of content that has been produced by ₿OSS 2025 program participants. Note that some material may be program content adjacent.
 
 * https://itsrealfake.github.io/
 * https://medium.com/@larrydev/understanding-the-bitcoin-protocol-retro-1-outputs-not-balances-d08712e57931
@@ -12,3 +12,9 @@ Here's a brief and curated (and thus also incomplete) list of content that has b
 * https://github.com/jimasuen/der-encoding-notes
 * https://chuksys.medium.com/bitcoin-oss-contributor-resources-tools-docs-and-platforms-to-help-you-get-involved-1e5c53ab16a0
 * https://github.com/JeremiahR/notes
+* https://medium.com/@sulaimanaminu02/locktime-in-bitcoin-f5264d3baeba
+* https://chuksys.medium.com/mastering-lightning-onion-routing-a-simple-guide-to-implementing-sphinx-in-the-lightning-network-6c06921348d7
+
+Recaps of the Battle of Galen Erso:
+* https://blog.bakungabronson.com/the-battle-of-galen-erso-recap
+* https://blog.jgmontoya.com/2025/02/04/CAddrMan-Vulnerability.html

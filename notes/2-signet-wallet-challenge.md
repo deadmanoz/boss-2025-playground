@@ -2,7 +2,7 @@
 
 There were 2 parts to this work, (1) was focused on "recovering" a wallet from a provided private key and (2) was about creating spends from the wallet using different transaction types. I didn't set out to write so much, but there was a lot of ground to cover and learning to be done.
 
-We were required to work against a signet Bitcoin network that had been setup specifically for the BOSS 2025 program. To lock in a known state for evaluation purposes, a certain block was invalidated with `invalidateblock`, rendering all following blocks to also be invalid. Why do I mention this? I found the use of it in one of the setup scripts, ran the script locally and subsequently forgot about it. Sometime later, when I was working on the second part of the challenge, I encountered invalid TXIDs that I knew to be valid.. took me a while to realise it why!
+We were required to work against a signet Bitcoin network that had been setup specifically for the ₿OSS 2025 program. To lock in a known state for evaluation purposes, a certain block was invalidated with `invalidateblock`, rendering all following blocks to also be invalid. Why do I mention this? I found the use of it in one of the setup scripts, ran the script locally and subsequently forgot about it. Sometime later, when I was working on the second part of the challenge, I encountered invalid TXIDs that I knew to be valid.. took me a while to realise it why!
 
 ## Wallet recovery
 This was the easier of the two parts. I was both anxious to get stuck in and also not confident in my fledgling Rust skillz so I did the initial implementation in Python. Once I had a working implementation, I re-implemented in Rust as I had a template I understood to work from.
