@@ -3,9 +3,10 @@
 This is my "playground" for the ₿OSS 2025 program. I'm using this repo to record my progress and learnings as I work through, and as a forcing function to stay the course and see it through.
 
 ## Background
-- [Intro](notes/0-intro.md)
+- [Intro](INTRO.md)
 
 ## "Coursework" component
+- [Bitcoin Core "Test the Test"](notes/0-bitcoin-core-test-the-test.md)
 - [RPC Scavenger Hunt](notes/1-rpc-scavenger-hunt.md)
 - [Signet Wallet Challenge](notes/2-signet-wallet-challenge.md)
 - [Block builder](notes/3-block-builder.md)
