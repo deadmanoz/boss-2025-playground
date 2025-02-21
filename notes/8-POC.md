@@ -14,7 +14,7 @@ I also had a lot of fun during the [Battle of Galen Erso](./5-battle-of-galen-er
 Perhaps the only downside of choosing this project is that it won't require me to use Rust (Warnet is Python), which is the language
 I'm picking up during ₿OSS and want to become proficient in (so using it for everything would best).
 
-# Replacement cycling attacks
+## Replacement cycling attacks
 Straight up, I have no pre-existing knowledge of the Replacement Cycling Attacks. But I do remember hearing about Antoine Riard halting his involvement with the Lightning network, probably on [Rabbit Hole Recap](https://rhr.tv); it turns out this was due to his concern over the Replacement Cycling Attacks:
 
 > _“Effective now, I’m halting my involvement with the development of the Lightning Network and its implementations, including coordinating the handling of security issues at the protocol level... I think this new class of replacement cycling attacks puts Lightning in a very perilous position.”_
@@ -30,3 +30,24 @@ Bitcoin Optech have a good overview topic page on the concept of [Replacement Cy
 > _"Replacement cycling is an attack against CPFP fee bumps and transactions using `SIGHASH_SINGLE` that allows an attacker to remove an unconfirmed transaction from the mempools of relaying full nodes without leaving an alternative transaction in its place."_
 
 The phrase Replacement Cycling is used to describe the removal of an unconfirmed transaction from 'the mempool' (using this phrase as a general term) using fee-bumping techniques without leaving an alternative transaction in its place, and this process occurring repeatedly as the innocent party broadcasts their transaction only to have it removed again in this manner by an attacker.
+
+## Problems encountered
+
+### "Non-final" transactions
+During implementation I encountered a `non-final` error when broadcasting a transaction as below. Looking into this, a transaction is considered "final" if its time-based constraints are satisfied given the current state of the blockchain. The error I had made was that I used in an incorrect block height, a value into the future, in the `nLockTime` field of the transaction and attempted to broadcast it.
+
+```python
+ReplacementCycling1 JSONRPC error
+Traceback (most recent call last):
+  File "/shared/archive.pyz/test_framework/test_framework.py", line 131, in main
+    self.run_test()
+  File "/shared/archive.pyz/replacement_cycling_1.py", line 588, in run_test
+    bob_timeout_txid_2 = bob.sendrawtransaction(bob_timeout_tx_2.serialize().hex())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/archive.pyz/test_framework/coverage.py", line 50, in __call__
+    return_val = self.auth_service_proxy_instance.__call__(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/shared/archive.pyz/test_framework/authproxy.py", line 129, in __call__
+    raise JSONRPCException(response['error'], status)
+test_framework.authproxy.JSONRPCException: non-final (-26)
+```
