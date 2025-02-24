@@ -54,15 +54,6 @@ So to generate the padding we need:
 - A deterministic CSPRNG to generate the random byte stream given the `pad` key - ChaCha20 with a fixed nonce
 - A 0x00-byte stream of the desired output size as the message - 1300 bytes of 0x00
 
-It might look something like this in Rust:
-```Rust
-let nonce = [0u8; 12]; // 96-bit null-nonce
-let mut onion_payload_init = [0u8; ONION_PAYLOAD_LENGTH];
-let mut cipher = ChaCha20::new(pad_key, &nonce.into());
-
-cipher.apply_keystream(&mut onion_payload_init);
-```
-
 ### Multiple iterations to generate the filler
 Now onto the filler itself. The filler has a very specific structure due to the need for the onion packet to be unwrapped and re-wrapped by each hop/node in the path. And for the HMAC result as computed by each node to match the HMAC encoded into the payload by the original sender.
 
@@ -73,11 +64,7 @@ The creation of the filler is an iterative process, where each iteration generat
 We can first determine what the size of the filler should be, by determining the length of all but the first hops payloads. Now the term `payload` is a bit loaded here because we have:
 - `payload for hop` - this is the actual data intended for the node/hop.
 - `hop payload` - this has 3 components, one of which is the `payload for hop`, another being the BigSize encoded length of the `payload for hop`, and the third being the HMAC of the onion payload (32 bytes).
-
-```Rust
-let all_hops_payload_length = hops.iter().map(|hop| hop.payload.len()).sum();
-let filler_length = all_hops_payload_length - hops[0].payload.len();
-```
+So we just add the length of all but the first hops `hop payload` to get the total length of the filler.
 
 Let's follow in the footsteps of Elle Mouton and have a sender, `Alice`, with `Bob` & `Charlie` being the intermediate nodes and `Dave` being the final recipient. Again, the purpose of the filler is to ensure that
 the HMACs that are computed by each node match the HMACs that are encoded into the onion payload by the original sender.
@@ -111,42 +98,3 @@ Here's the key sentence: `Bob`'s filler component is the last `len(payload for B
 This is easy enough to accomplish. When we're adding `Charlie`'s filler contribution, we simply ensure that `Bob`'s filler contribution is also encrypted with the same pseudo-random stream (`rho_AC`), but account for the fact that it would be `len(payload for Bob)` bytes into `Charlie`'s onion payload when it is initially decrypted (encrypted) by `Charlie`.
 
 For this example were done; we've created the filler for the required 2 hops, `Bob` and `Charlie`, so we can now add this filler into the initial onion payload for `Dave` (the last `len(payload for Bob) + len(payload for Charlie)` bytes) and start the wrapping process (backwards from recipient). For a route with more hops, we'd simply repeat the above process, each time effectively shifting the previous hops filler contributions to the left and applying the pseudo-random stream via XOR to these contributions as well to 0x00 bytes the length of the current hop (`len(payload for hop)`) to finalise the current hop's filler contribution.
-
-Anyway, at this point it might just be easier to explain the above with some demo code that shows how we can create the filler. Putting this into the initial onion payload, and wrapping for each hop is left as an exercise for the reader!
-
-```Rust
-let mut filler = vec![0u8; filler_length];
-// For all hops but the last, calculate the required filler size and position
-// Generate the cipher stream, and then XOR the filler with the cipher stream
-for i in 0..hops.len() - 1 {
-    let hop_rho = rho_for_hop(i);
-
-    // We need to know how many bytes the previous hops have contributed to the filler
-    let mut prev_hops_fill_size = 0;
-    for j in 0..i {
-        prev_hops_fill_size += hops[j].payload.len();
-    }
-    // The previous hops filler contributes are effectively left-shifted so that they end at
-    // byte index ONION_PAYLOAD_LENGTH - 1 (1299)
-    let filler_start = ONION_PAYLOAD_LENGTH - prev_hops_fill_size;
-    // This hops filler starts at byte index ONION_PAYLOAD_LENGTH (1300)
-    // and ends at 1300 + the size of the current hop payload
-    let filler_end = ONION_PAYLOAD_LENGTH + hops[i].payload.len();
-
-    // Generate the cipher stream (pseudo-random stream)
-    let nonce = [0u8; 12]; // 96-bit null-nonce
-    let mut cipher = ChaCha20::new(&hop_rho.into(), &nonce.into());
-    // Use 2x 1300 to simplify the index calculations
-    let mut cipher_stream = [0u8; ONION_PAYLOAD_LENGTH * 2];
-    cipher.apply_keystream(&mut cipher_stream);
-
-    // XOR the filler with the cipher stream
-    // Note that this is applying the current hops pseudo-random stream populated
-    // filler thus far. The current hops data is from byte index ONION_PAYLOAD_LENGTH (1300)
-    // to filler_end and the previous hops data is from byte index filler_start to
-    // ONION_PAYLOAD_LENGTH - 1 (1299)
-    for i in filler_start..filler_end {
-        filler[i-filler_start] ^= cipher_stream[i];
-    }
-}
-```
