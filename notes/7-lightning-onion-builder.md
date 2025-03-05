@@ -2,7 +2,7 @@
 
 **_NOTE: this is still a work in progress, it's much harder to communicate than I initially thought and IMO the current illustrations are not as clear as they could be!_**
 
-Fittingly enough, being the last "coursework" challenge, this one was probably the most difficult of the challenges thus far. The goal was to implement the construction of Lightning network onion packets given a list of hops, including hop/node pubkeys and payloads.
+Fittingly enough, being the last "coursework" challenge, this one was probably the most difficult of the challenges thus far. It was all about understanding the construction of Lightning Network onion packets.
 
 The difficulties in this challenge lay in a few areas:
 - The need to familiarise yourself with [BOLT #4 - Onion Routing](https://github.com/lightning/bolts/blob/master/.04-onion-routing.md)
