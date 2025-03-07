@@ -18,6 +18,9 @@ This is my "playground" for the ₿OSS 2025 program. I'm using this repo to reco
 ## Build the things
 - [POC](notes/8-POC.md)
 - [👋 Payjoin Dev Kit (rust-payjoin)](notes/9.1-hello-rust-payjoin.md)
+- [👋 Warnet](notes/9.1-hello-warnet.md)
+- [👋 SimLN](notes/9.1-hello-simln.md)
+
 
 ## External links & other stuff
 - [Participant content](participant-content.md)
