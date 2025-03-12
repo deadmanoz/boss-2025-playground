@@ -3,7 +3,11 @@ A dumping ground of resources to check out or things to do. I'll prioritise this
 
 ## Resources
 Blockbuilding - https://podcast.chaincode.com/2022/01/31/blockbuilding-clara-murch.html
+Erlay paper - https://arxiv.org/pdf/1905.10518
 
 ## Tooling or infrastructure to setup
+- [ ] Self-hosted IRC bouncer & client
+- [ ] GPG key for signing commits, configured in git
 - [ ] Linux VMs for dev and testing on homelab Proxmox server
+- [ ] Setup self-hosted variants of mempool.observer, transactionfee.info, miningpool.observer, fork.observer
 - [ ] Bitcoin Core node for [USDT](https://github.com/bitcoin/bitcoin/blob/master/doc/tracing.md) experimentation

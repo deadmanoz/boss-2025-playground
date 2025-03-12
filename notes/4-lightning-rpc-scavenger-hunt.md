@@ -19,7 +19,5 @@ Receiving bitcoin on Bitcoin is a passive and asynchronous activity. You, or sof
 `Chapter 3: How the Lightning Network Works - Offline Versus Online, Asynchronous Versus Synchronous`:
 > Receiving bitcoin on the Bitcoin blockchain is a passive and asynchronous activity that does not require any interaction by the recipient or for the recipient to be online at any time. (..) In Lightning, the recipient must be online to complete the payment before it expires. The recipient must run a node or have someone that runs a node on their behalf (a third-party custodian). To be precise, both nodes, the sender’s and the recipient’s, must be online at the time of payment and must coordinate. Receiving a Lightning payment is an active and synchronous activity between sender and recipient.
 
-More to follow..
-
 ## Some notes on the challenge
 The most interesting part was putting a toe into the water of custom routing of payments. Seemed pretty straightforward once you explore the LND RPC methods, but there were a few gotchas that tripped me up (I won't note them here as they are part of the challenge!). `INCORRECT_OR_UNKNOWN_PAYMENT_DETAILS` is an annoyingly vague error, but I can appreciate it's necessary to not reveal too much information on failures lest they be exploited.

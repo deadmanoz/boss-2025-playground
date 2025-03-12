@@ -9,12 +9,10 @@ This is my "playground" for the ₿OSS 2025 program. I'm using this repo to reco
 - [Bitcoin Core "Test the Test"](notes/0-bitcoin-core-test-the-test.md)
 - [RPC Scavenger Hunt](notes/1-rpc-scavenger-hunt.md)
 - [Signet Wallet Challenge](notes/2-signet-wallet-challenge.md)
-- [Block builder](notes/3-block-builder.md)
+- [Block Builder](notes/3-block-builder.md)
 - [Lightning RPC Scavenger Hunt](notes/4-lightning-rpc-scavenger-hunt.md)
-- [Battle of Galen Erso](notes/5-battle-of-galen-erso.md)
-- [Lightning Route Builder](notes/6-lightning-route-builder.md)
-- [Lightning Onion Builder](notes/7-lightning-onion-builder.md)
-
+- [CTF Challenge](notes/5-ctf-challenge.md)
+- [Lightning Builders](notes/6-7-lightning-builders.md)
 ## Build the things
 - [POC](notes/8-POC.md)
 - [👋 Payjoin Dev Kit (rust-payjoin)](notes/9.1-hello-rust-payjoin.md)

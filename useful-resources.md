@@ -21,17 +21,36 @@ Some great information and illustrations on the Lightning Network and the mechan
 
 https://ellemouton.com
 
+## Bitcoin Optech
+Straight from the horse's mouth:
+> _"provide(s) workshops, weekly newsletters, case studies and announcements, analysis of Bitcoin software and services, a podcast, and help facilitate improved relations between businesses and the open source community."_
 
-## ₿OSS/Chaincode program content
+Lots of articles explaining various concepts or terminology and a chronological perspective of what is being discussed or worked on, by and large, by the Bitcoin ecosystem at any given time (going back years). I finally understand enough to be able to read (or listen to the Podcast recap) the weekly newsletter after having participated in ₿OSS 2025!
+
+https://bitcoinops.org
+
+## Developer discussion lists/forums
+- [Bitcoin-Dev mailing list](https://gnusha.org/pi/bitcoindev/)
+- [Delving Bitcoin](https://delvingbitcoin.org)
+
+## Develop or individual contributor blogs
+- OxB10C - https://b10c.me
 - A. Jonas - https://adamjonas.com/
 - John Newbery - https://johnnewbery.com/
-- Yonson (2024) - https://blog.yonson.dev/manual/bitcoin/
-
-## Developer blogs
-- OxB10C - https://b10c.me
+- Yonson (₿OSS 2024 alum) - https://blog.yonson.dev/manual/bitcoin/
+- AJ Towns - https://www.erisian.com.au/wordpress/
+- Ava Chow - https://achow101.com
+- Jon Atack - https://jonatack.github.io
+- Fanis Michalakis - https://fanismichalakis.fr
 
 ## Bitcoin Core
 - Debugging Bitcoin Core: https://github.com/fjahr/debugging_bitcoin
+- Bitcoin Core PR Review Club: https://bitcoincore.reviews
+- Chaincode's Bitcoin Protocol Development Seminars: https://chaincode.gitbook.io/seminars/bitcoin-protocol-development
+
+## Lightning
+- Lightning Development Kit (LDK) Review Club: https://ldk.reviews
+- Chaincode's Lightning Protocol Development Seminars: https://chaincode.gitbook.io/seminars/lightning-protocol-development
 
 ## Rust
 - Rust by example: https://doc.rust-lang.org/rust-by-example/index.html

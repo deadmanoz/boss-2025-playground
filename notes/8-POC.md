@@ -9,7 +9,7 @@ I decided on the **Warnet scenario for Replacement Cycling Attack** POC not nece
 - Bitcoin Core functional test framework
 - How to monitor the network for replacement cycling attacks
 
-I also had a lot of fun during the [Battle of Galen Erso](./5-battle-of-galen-erso.md) challenge and was kinda shocked how easy it was to take down/DOS Bitcoin Core nodes! So it seemed prudent to also get a handle on some of the issues with the Lightning network by looking at Replacement Cycling Attacks.
+I also had a lot of fun during the [CTF Challenge](./5-ctf-challenge.md) and was kinda shocked how easy it was to take down/DOS Bitcoin Core nodes! So it seemed prudent to also get a handle on some of the issues with the Lightning network by looking at Replacement Cycling Attacks.
 
 Perhaps the only downside of choosing this project is that it won't require me to use Rust (Warnet is Python), which is the language
 I'm picking up during ₿OSS and want to become proficient in (so using it for everything would best).
