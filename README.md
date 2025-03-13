@@ -19,7 +19,7 @@ This is my "playground" for the ₿OSS 2025 program. I'm using this repo to reco
 - [👋 Warnet](notes/9.1-hello-warnet.md)
 - [👋 SimLN](notes/9.1-hello-simln.md)
 - [👋 Rust Bitcoin](notes/9.1-hello-rust-bitcoin.md)
-
+- [👋 0xB10C Monitoring](notes/9.1-hello-0xb10c-monitoring.md)
 
 ## External links & other stuff
 - [Participant content](participant-content.md)
