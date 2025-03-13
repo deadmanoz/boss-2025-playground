@@ -1,4 +1,5 @@
 # ₿OSS 2025 POC
+The repo relevant to this project is [Warnet Scenarios](https://github.com/deadmanoz/warnet-scenarios).
 
 ## Project selection
 I decided on the **Warnet scenario for Replacement Cycling Attack** POC not necessarily because I knew beforehand anything about Replacement Cycling Attacks, but because it seemed to allow me to continue to cover and go deeper on a broad range of aspects of Bitcoin and Lightning (without necessarily committing to any particular rabbit-hole to specialise in yet):

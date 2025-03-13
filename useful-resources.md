@@ -29,6 +29,9 @@ Lots of articles explaining various concepts or terminology and a chronological 
 
 https://bitcoinops.org
 
+## Other aggregations or lists of resources
+- https://github.com/lucasdcf/bitcoin-dev-resources - last updated May 2023
+
 ## Developer discussion lists/forums
 - [Bitcoin-Dev mailing list](https://gnusha.org/pi/bitcoindev/)
 - [Delving Bitcoin](https://delvingbitcoin.org)

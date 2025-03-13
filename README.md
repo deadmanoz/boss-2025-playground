@@ -13,13 +13,19 @@ This is my "playground" for the ₿OSS 2025 program. I'm using this repo to reco
 - [Lightning RPC Scavenger Hunt](notes/4-lightning-rpc-scavenger-hunt.md)
 - [CTF Challenge](notes/5-ctf-challenge.md)
 - [Lightning Builders](notes/6-7-lightning-builders.md)
+
 ## Build the things
 - [POC](notes/8-POC.md)
 - [👋 Payjoin Dev Kit (rust-payjoin)](notes/9.1-hello-rust-payjoin.md)
-- [👋 Warnet](notes/9.1-hello-warnet.md)
-- [👋 SimLN](notes/9.1-hello-simln.md)
-- [👋 Rust Bitcoin](notes/9.1-hello-rust-bitcoin.md)
-- [👋 0xB10C Monitoring](notes/9.1-hello-0xb10c-monitoring.md)
+- [👋 Warnet](notes/9.2-hello-warnet.md)
+- [👋 SimLN](notes/9.3-hello-simln.md)
+- [👋 Rust Bitcoin](notes/9.4-hello-rust-bitcoin.md)
+- [👋 0xB10C Monitoring](notes/9.5-hello-0xb10c-monitoring.md)
+- [👋 Bitcoin Dev Kit (BDK)](notes/9.6-hello-bdk.md)
+- [👋 Bitcoin Core Fuzzing](notes/9.7-hello-bitcoin-core-fuzzing.md)
+
+## Final stages
+- [Reflections](reflections.md)
 
 ## External links & other stuff
 - [Participant content](participant-content.md)
